@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.joymeter.dao.Dao">
+    
+    <insert id="addUser" parameterType="com.joymeter.entity.User">
+        insert into tRemote_customer
+        (UserName,MeterId,OldMeterID,FactoryId,MeterAddr,Linkman,Phone,PaperNo,Address,Caliber,
+        InstallDate,IfCtrlValve,Imported,UserCode,Remark,ExtendData1,ExtendData2,ExtendData3)
+        values(#{UserName},#{MeterId},#{OldMeterID},#{FactoryId},#{MeterAddr},#{Linkman},
+        #{Phone},#{PaperNo},#{Address},#{Caliber},#{InstallDate},#{IfCtrlValve},#{Imported},
+        #{UserCode},#{Remark},#{ExtendData1},#{ExtendData2},#{ExtendData3})
+    </insert>
+    
+    <select id="findAllUser" resultType="com.joymeter.entity.User">
+        select * from tRemote_customer
+    </select>
+    
+    <update id="updateUser" parameterType="com.joymeter.entity.User">
+        update tRemote_customer set name=#{UserName},MeterId=#{MeterId} where Id=#{Id}
+    </update>
+    
+</mapper>

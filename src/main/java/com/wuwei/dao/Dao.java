@@ -1,6 +1,6 @@
-package com.joymeter.dao;
+package com.wuwei.dao;
 
-import com.joymeter.entity.User;
+import com.wuwei.entity.User;
 
 /**
  * Data Access Layer

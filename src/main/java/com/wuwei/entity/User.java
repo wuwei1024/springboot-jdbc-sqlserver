@@ -1,4 +1,4 @@
-package com.joymeter.entity;
+package com.wuwei.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

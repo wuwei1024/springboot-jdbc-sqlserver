@@ -1,4 +1,4 @@
-package com.joymeter.util;
+package com.wuwei.util;
 
 import java.sql.*;
 import java.lang.reflect.Field;

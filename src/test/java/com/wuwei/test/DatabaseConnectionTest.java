@@ -1,7 +1,7 @@
-package com.joymeter.test;
+package com.wuwei.test;
 
-import com.joymeter.entity.User;
-import com.joymeter.util.JDBCUtils;
+import com.wuwei.entity.User;
+import com.wuwei.util.JDBCUtils;
 import java.sql.*;
 import java.util.List;
 import java.util.logging.Level;

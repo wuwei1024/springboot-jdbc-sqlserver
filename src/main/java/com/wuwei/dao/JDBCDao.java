@@ -1,7 +1,7 @@
-package com.joymeter.dao;
+package com.wuwei.dao;
 
-import com.joymeter.entity.User;
-import com.joymeter.util.JDBCUtils;
+import com.wuwei.entity.User;
+import com.wuwei.util.JDBCUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;

@@ -1,12 +1,12 @@
-package com.joymeter.controller;
+package com.wuwei.controller;
 
-import com.joymeter.entity.Result;
-import com.joymeter.entity.User;
+import com.wuwei.entity.Result;
+import com.wuwei.entity.User;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.joymeter.service.BaseService;
+import com.wuwei.service.BaseService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 

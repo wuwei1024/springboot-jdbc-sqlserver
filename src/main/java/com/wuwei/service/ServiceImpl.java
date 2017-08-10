@@ -1,8 +1,8 @@
-package com.joymeter.service;
+package com.wuwei.service;
 
-import com.joymeter.dao.Dao;
-import com.joymeter.entity.Result;
-import com.joymeter.entity.User;
+import com.wuwei.dao.Dao;
+import com.wuwei.entity.Result;
+import com.wuwei.entity.User;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;

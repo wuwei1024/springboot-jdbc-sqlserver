@@ -1,7 +1,7 @@
-package com.joymeter.service;
+package com.wuwei.service;
 
-import com.joymeter.entity.Result;
-import com.joymeter.entity.User;
+import com.wuwei.entity.Result;
+import com.wuwei.entity.User;
 
 /**
  * BaseService Layer

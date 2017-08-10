@@ -1,4 +1,4 @@
-package com.joymeter;
+package com.wuwei;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

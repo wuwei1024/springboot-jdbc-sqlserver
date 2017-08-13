@@ -1,6 +1,7 @@
 package com.wuwei.dao;
 
-import com.wuwei.entity.User;
+import com.wuwei.entity.Student;
+import java.util.List;
 
 /**
  * Data Access Layer
@@ -10,14 +11,12 @@ import com.wuwei.entity.User;
  */
 public interface Dao {
 
-    public int addUser(User user);
-    
-    public int updateUser(User user);
+    public int addStudent(Student student);
 
-    public int changeMeterId(String meterId, String oldMeterId);
+    public List<?> findAllStudent();
 
-    public int saveReadData(String factoryId, String meterAddr, Double readNumber, String readDate);
+    public int updateStudent(Student student);
 
-    public int updateValveData(String meterAddr, String ifProcess, String processDate, String processResult, String processDesc);
+    public int delStudentById(long id);
 
 }

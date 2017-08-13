@@ -3,21 +3,16 @@
  "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.joymeter.dao.Dao">
     
-    <insert id="addUser" parameterType="com.joymeter.entity.User">
-        insert into tRemote_customer
-        (UserName,MeterId,OldMeterID,FactoryId,MeterAddr,Linkman,Phone,PaperNo,Address,Caliber,
-        InstallDate,IfCtrlValve,Imported,UserCode,Remark,ExtendData1,ExtendData2,ExtendData3)
-        values(#{UserName},#{MeterId},#{OldMeterID},#{FactoryId},#{MeterAddr},#{Linkman},
-        #{Phone},#{PaperNo},#{Address},#{Caliber},#{InstallDate},#{IfCtrlValve},#{Imported},
-        #{UserCode},#{Remark},#{ExtendData1},#{ExtendData2},#{ExtendData3})
+    <insert id="addStudent" parameterType="com.wuwei.entity.Student">
+        insert into student(name,course)values(#{name},#{course})
     </insert>
     
-    <select id="findAllUser" resultType="com.joymeter.entity.User">
-        select * from tRemote_customer
+    <select id="findAllStudent" resultType="com.wuwei.entity.Student">
+        select * from student
     </select>
     
-    <update id="updateUser" parameterType="com.joymeter.entity.User">
-        update tRemote_customer set name=#{UserName},MeterId=#{MeterId} where Id=#{Id}
+    <update id="updateStudent" parameterType="com.wuwei.entity.Student">
+        update student set name=#{name},course=#{course} where id=#{id}
     </update>
     
 </mapper>

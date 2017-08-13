@@ -29,7 +29,7 @@ public class JDBCUtils {
      * @return
      */
     public static Connection getConnection() {
-        String url = "jdbc:sqlserver://localhost:1434;databaseName=MidDb";
+        String url = "jdbc:sqlserver://localhost:1434;databaseName=student";
         String username = "sa";
         String password = "123456";
         if (connection != null) {

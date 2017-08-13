@@ -1,6 +1,6 @@
 package com.wuwei.test;
 
-import com.wuwei.entity.User;
+import com.wuwei.entity.Student;
 import com.wuwei.util.JDBCUtils;
 import java.sql.*;
 import java.util.List;
@@ -22,16 +22,16 @@ public class DatabaseConnectionTest {
     public static void queryTest() {
         try {
             Connection conn = JDBCUtils.getConnection();
-            String sql = "select * from tRemote_customer where Id = ?";
+            String sql = "select * from student where id = ?";
             PreparedStatement pre = conn.prepareStatement(sql);
-            pre.setInt(1, 2);
+            pre.setInt(1, 1);
             ResultSet rs = pre.executeQuery();
             //结果集转换成实体对象
-            List<?> list = JDBCUtils.TranverseToList(rs, User.class);
+            List<?> list = JDBCUtils.TranverseToList(rs, Student.class);
             //循环遍历结果
             for (int i = 0; i < list.size(); i++) {
-                User user = (User) list.get(i);
-                System.out.println(user);
+                Student student = (Student) list.get(i);
+                System.out.println(student);
             }
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(DatabaseConnectionTest.class.getName()).log(Level.SEVERE, null, ex);

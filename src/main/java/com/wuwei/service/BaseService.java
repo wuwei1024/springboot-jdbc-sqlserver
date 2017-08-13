@@ -1,7 +1,7 @@
 package com.wuwei.service;
 
 import com.wuwei.entity.Result;
-import com.wuwei.entity.User;
+import com.wuwei.entity.Student;
 
 /**
  * BaseService Layer
@@ -11,14 +11,11 @@ import com.wuwei.entity.User;
  */
 public interface BaseService {
 
-    public Result addUser(User user);
+    public Result addStudent(Student student);
+    
+    public Result findAllStudent();
 
-    public Result updateUser(User user);
-
-    public Result changeMeterId(String meterId, String oldMeterId);
-
-    public Result saveReadData(String factoryId, String meterAddr, Double readNumber, String readDate);
-
-    public Result updateValveData(String meterAddr, String ifProcess, String processDate, String processResult, String processDesc);
-
+    public Result updateStudent(Student student);
+    
+    public Result delStudentById(String id);
 }

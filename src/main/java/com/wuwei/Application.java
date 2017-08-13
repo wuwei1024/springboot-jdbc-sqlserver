@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2017-8-5 14:04:37
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.joymeter.dao")
+@MapperScan(basePackages = "com.wuwei.dao")
 public class Application {
 
     public static void main(String[] args) {

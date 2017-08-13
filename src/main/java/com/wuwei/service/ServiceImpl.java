@@ -2,7 +2,8 @@ package com.wuwei.service;
 
 import com.wuwei.dao.Dao;
 import com.wuwei.entity.Result;
-import com.wuwei.entity.User;
+import com.wuwei.entity.Student;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
@@ -21,10 +22,10 @@ public class ServiceImpl implements BaseService {
     private static final Logger logger = Logger.getLogger(ServiceImpl.class.getName());
 
     @Override
-    public Result addUser(User user) {
+    public Result addStudent(Student student) {
         Result result = new Result();
         try {
-            int res = dao.addUser(user);
+            int res = dao.addStudent(student);
             result.setStatus(res);
         } catch (Exception e) {
             logger.log(Level.SEVERE, null, e);
@@ -33,10 +34,23 @@ public class ServiceImpl implements BaseService {
     }
 
     @Override
-    public Result updateUser(User user) {
+    public Result findAllStudent() {
         Result result = new Result();
         try {
-            int res = dao.updateUser(user);
+            List<?> students = dao.findAllStudent();
+            result.setStatus(1);
+            result.setData(students);
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, null, e);
+        }
+        return result;
+    }
+
+    @Override
+    public Result updateStudent(Student student) {
+        Result result = new Result();
+        try {
+            int res = dao.updateStudent(student);
             result.setStatus(res);
         } catch (Exception e) {
             logger.log(Level.SEVERE, null, e);
@@ -45,34 +59,10 @@ public class ServiceImpl implements BaseService {
     }
 
     @Override
-    public Result changeMeterId(String meterId, String oldMeterId) {
+    public Result delStudentById(String id) {
         Result result = new Result();
         try {
-            int res = dao.changeMeterId(meterId, oldMeterId);
-            result.setStatus(res);
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, null, e);
-        }
-        return result;
-    }
-
-    @Override
-    public Result saveReadData(String factoryId, String meterAddr, Double readNumber, String readDate) {
-        Result result = new Result();
-        try {
-            int res = dao.saveReadData(factoryId, meterAddr, readNumber, readDate);
-            result.setStatus(res);
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, null, e);
-        }
-        return result;
-    }
-
-    @Override
-    public Result updateValveData(String meterAddr, String ifProcess, String processDate, String processResult, String processDesc) {
-        Result result = new Result();
-        try {
-            int res = dao.updateValveData(meterAddr, ifProcess, processDate, processResult, processDesc);
+            int res = dao.delStudentById(Long.parseLong(id));
             result.setStatus(res);
         } catch (Exception e) {
             logger.log(Level.SEVERE, null, e);

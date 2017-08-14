@@ -50,13 +50,6 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.joymeter</groupId>
-            <artifactId>SpringBoot-MVC-JDBC-SqlServer</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
-            <type>jar</type>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

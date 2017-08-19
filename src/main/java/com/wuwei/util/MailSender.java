@@ -1,4 +1,4 @@
-package com.wuwei.mail;
+package com.wuwei.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,7 +34,7 @@ public class MailSender {
     private static final Logger logger = Logger.getLogger(MailSender.class.getName());
 
     public static void main(String[] args) {
-        sendAttachmentMail("D:\\XXX.text");
+        sendAttachmentMail("D:\\XXX.txt");
     }
 
     public static void sendAttachmentMail(String filename) {

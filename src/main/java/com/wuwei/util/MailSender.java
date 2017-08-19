@@ -101,7 +101,7 @@ public class MailSender {
      */
     private static Map<String, String> readMailConfig() {
         StringBuilder fileName = new StringBuilder(CLASSPATH);
-        fileName.append("sendMail.properties");
+        fileName.append("mail.properties");
         Properties prop = new Properties();
         try {
             prop.load(new FileInputStream(fileName.toString()));
